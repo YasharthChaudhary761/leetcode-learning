@@ -12,7 +12,7 @@ class Solution {
         
     }
 } */
-         int length = 0;
+      /**    int length = 0;
         ListNode current = head;
         while (current != null) {
             current = current.next;
@@ -24,6 +24,25 @@ class Solution {
             current = current.next;
         }
         return current;
+    }
+} **/
+   ListNode dummy=head;
+   ListNode mid=head;
+   int count=0;
+   while(dummy!=null)
+   {
+    if(count%2==0)
+    {
+        dummy=dummy.next;
+        count++;
+    }
+    else{
+        mid=mid.next;
+        dummy=dummy.next;
+        count++;
+    }
+   }
+   return mid;
     }
 }
         
