@@ -1,6 +1,6 @@
 class Solution {
     public ListNode middleNode(ListNode head) {
-        if(head==null) return null;
+     /*   if(head==null) return null;
         ListNode first=head;
         ListNode second=head;
         while(first!=null && first.next!=null)
@@ -8,10 +8,11 @@ class Solution {
           first=first.next.next;
           second=second.next;
         }
-        return second;
+        return second; 
+        
     }
-}
-    /**    int length = 0;
+} */
+         int length = 0;
         ListNode current = head;
         while (current != null) {
             current = current.next;
@@ -23,4 +24,6 @@ class Solution {
             current = current.next;
         }
         return current;
-        */
+    }
+}
+        
