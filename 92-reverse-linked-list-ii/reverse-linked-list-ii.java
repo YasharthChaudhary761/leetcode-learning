@@ -13,21 +13,21 @@ class Solution {
         if(head==null || left==right) return head;
         ListNode dummy=new ListNode(0);
         dummy.next = head;
-        
+
         
         ListNode prev=dummy;
-        for(int i=0;i<left-1;++i)
+        for(int i=0;i<left-1;++i)  // prev ko left ke pehle tak le jaa rha hai
         {
             prev=prev.next;
         }
 
         ListNode curr=prev.next;
 
-        for(int i=0;i<(right-left);++i)
+        for(int i=0;i<(right-left);++i)    // right -left krr rhe hai...jisse ye pta chalega ki kitni baar ye wala process krna hai
         {
             ListNode NXT=curr.next;
             curr.next=NXT.next;
-            NXT.next=prev.next;
+            NXT.next=prev.next;       // Ye khud se dry run krke dekho..ye charo line
             prev.next=NXT;
         }
         return dummy.next;
