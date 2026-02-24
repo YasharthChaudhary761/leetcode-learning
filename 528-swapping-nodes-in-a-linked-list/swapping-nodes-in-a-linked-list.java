@@ -11,9 +11,9 @@
 class Solution {
     public ListNode swapNodes(ListNode head, int k) {
         ListNode temp=head;
-        for(int i=1;i<k;i++)
+        for(int i=1;i<k;i++)  //k-1 tak chalega Nii to even odd elements wale me dikkat ayega
         {
-            temp=temp.next;
+            temp=temp.next;  // Kyyuki temp =temp.next to ho hi rha hai
         }
 
         ListNode fast=temp;
