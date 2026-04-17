@@ -15,7 +15,7 @@ class Solution {
                     continue;
                 }
                 int num=digits[i]*100+digits[j]*10+digits[k];
-                if(num>=100 && num<1000 && num%2==0) map.add(num);
+                if(num>=100 && num<999 && num%2==0) map.add(num);
             }
         }
        }
